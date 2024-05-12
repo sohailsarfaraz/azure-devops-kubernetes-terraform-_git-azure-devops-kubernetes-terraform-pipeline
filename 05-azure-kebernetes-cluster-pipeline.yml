@@ -20,6 +20,7 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'azure-resource-manager-service-connection'
     backendAzureRmTenantId: '908c9aa1-6175-4f5e-ba32-2c04f1062af0'
+    backendAzureRmSubscriptionId: '0381fc4d-72e7-4979-8171-343d4dcf2787'
     ensureBackend: true
     backendAzureRmResourceGroupName: 'terraform-backend-ss'
     backendAzureRmResourceGroupLocation: 'westeurope'
@@ -27,7 +28,6 @@ steps:
     backendAzureRmContainerName: 'storageacctsohailcontainer'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
     allowTelemetryCollection: true
-    secureFile: 'azure_rsa'
 - task: TerraformCLI@2
   inputs:
     command: 'init'
